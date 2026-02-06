@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0a;
+  color: #ededed;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero gradient background - matching reference */
+.hero-gradient {
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(32, 58, 67, 0.8) 0%, rgba(15, 32, 39, 0.6) 40%, rgba(10, 10, 10, 1) 100%);
+}
+
+/* Subtle glow orb */
+.glow-orb {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(45, 80, 90, 0.4) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Glass card - very subtle */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary button - white pill */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: black;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* Secondary button - outlined pill */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Badge pill */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Node label (floating elements) */
+.node-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.node-label .icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-label .name {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.node-label .value {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.625rem;
+}
+
+/* Curved line paths */
+.curved-line {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+  fill: none;
+}
+
+/* Stat card */
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+/* Tab toggle */
+.tab-toggle {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+
+.tab-toggle button {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.2s;
+}
+
+.tab-toggle button.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tag-pill.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Transaction card */
+.transaction-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+/* Vertical line decoration */
+.vertical-lines {
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  height: 100%;
+}
+
+.vertical-lines .line {
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
