@@ -13,12 +13,7 @@ export default function Home() {
     <main className="relative">
       <Header />
       <Hero />
-      <TechLogos />
-      <Insights />
-      <Wallet />
-      <Experience />
       <About />
-      <Contact />
       <Footer />
     </main>
   );
