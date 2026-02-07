@@ -11,10 +11,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="relative">
-      <Header />
       <Hero />
-      <About />
-      <Footer />
     </main>
   );
 }

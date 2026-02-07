@@ -48,8 +48,8 @@ export default function Hero() {
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6"
                 >
-                    Aswin{" "}
-                    <span className="font-medium">Gunasekaran</span>
+                    Hello{" "}
+                    <span className="font-medium">Momo Chutney</span>
                 </motion.h1>
 
                 {/* Subtext */}
@@ -59,7 +59,7 @@ export default function Hero() {
                     transition={{ delay: 0.5 }}
                     className="text-zinc-400 text-base md:text-lg max-w-xl mx-auto mb-10"
                 >
-                    Building data-driven systems at the intersection of AI, cloud, and real-world impact.
+                    Just a temporary version for testing purposes.
                 </motion.p>
 
                 {/* CTA Buttons */}
